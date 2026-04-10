@@ -18,7 +18,12 @@ A React-based frontend for the SAHYatri Tourist Safety Platform.
 * Axios
 * Socket.IO Client
 * Leaflet / React-Leaflet
-📁 Folder Structure
+
+---
+
+## 📁 Folder Structure
+
+```
 sahyatri-frontend/
 │
 ├── public/                # Static assets
@@ -37,6 +42,8 @@ sahyatri-frontend/
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
+
 
 ## 📦 Setup
 
