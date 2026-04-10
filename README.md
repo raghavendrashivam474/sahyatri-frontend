@@ -18,15 +18,25 @@ A React-based frontend for the SAHYatri Tourist Safety Platform.
 * Axios
 * Socket.IO Client
 * Leaflet / React-Leaflet
-Folder Structure:
-
+📁 Folder Structure
 sahyatri-frontend/
+│
+├── public/                # Static assets
 ├── src/
-├── public/
+│   ├── components/        # Reusable UI components
+│   ├── pages/             # Route pages (Dashboard, Map, etc.)
+│   ├── context/           # AuthContext, global state
+│   ├── hooks/             # Custom hooks (location, socket)
+│   ├── services/          # API calls (axios)
+│   ├── utils/             # Helper functions
+│   ├── App.jsx            # Main app component
+│   └── main.jsx           # Entry point
+│
+├── .env.example           # Environment variables template
 ├── .gitignore
-├── README.md
-├── .env.example
 ├── package.json
+├── vite.config.js
+└── README.md
 
 ## 📦 Setup
 
