@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useSocket } from '../hooks/useSocket';
+import { useAuth } from '../../context/AuthContext';
+import { useSocket } from '../../hooks/useSocket';
 
 function SettingsAdmin() {
   const [users, setUsers] = useState([]);

@@ -1,7 +1,10 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser, registerUser } from '../api/auth';
-import { useAuth } from '../context/AuthContext';
+import { loginUser, registerUser } from '../../api/auth';
+import { useAuth } from '../../context/AuthContext';
+
+// If it imports API:
+import API from '../../api/axios';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);

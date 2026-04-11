@@ -1,8 +1,8 @@
 ﻿// src/components/MapGeoFencing.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
-import { useSocket } from "../hooks/useSocket";
+import { useAuth } from "../../context/AuthContext";
+import { useSocket } from "../../hooks/useSocket";
 import {
   MapContainer,
   TileLayer,
@@ -13,7 +13,7 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import API from "../api/axios";
+import API from "../../api/axios";
 
 // Fix Leaflet marker icons
 delete L.Icon.Default.prototype._getIconUrl;

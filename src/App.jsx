@@ -3,32 +3,32 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Layouts
-import HomeLayout from './components/homelayout.jsx';
-import MainLayout from './components/mainlayout.jsx';
+import HomeLayout from './components/layout/HomeLayout.jsx';
+import MainLayout from './components/layout/MainLayout.jsx';
 
 // Public Pages
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Services from './components/Services.jsx';
-import Contact from './components/Contact.jsx';
-import Login from './components/Login.jsx';
-import Profile from './components/Profile.jsx';
+import Home from './components/pages/Home.jsx';
+import About from './components/pages/About.jsx';
+import Services from './components/pages/Services.jsx';
+import Contact from './components/pages/Contact.jsx';
+import Login from './components/auth/Login.jsx';
+import Profile from './components/pages/Profile.jsx';
 
 // Protected Pages
-import Dashboard from './components/Dashboard.jsx';
-import TouristsDirectory from './components/TouristsDirectory.jsx';
-import IncidentsAndAlerts from './components/Incidents & Alerts.jsx';
-import ReportsAnalytics from './components/Reports & Analytics.jsx';
-import HelpSupport from './components/Help & Support.jsx';
-import SettingsAdmin from './components/Settings & Admin.jsx';
-import MapGeoFencing from './components/MapGeoFencing.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import TouristsDirectory from './components/pages/TouristsDirectory.jsx';
+import IncidentsAndAlerts from './components/pages/IncidentsAndAlerts.jsx';
+import ReportsAnalytics from './components/pages/ReportsAnalytics.jsx';
+import HelpSupport from './components/pages/HelpSupport.jsx';
+import SettingsAdmin from './components/pages/SettingsAdmin.jsx';
+import MapGeoFencing from './components/map/MapGeoFencing.jsx';
 
 // Auth & Protection
-import ProtectedRoute from './components/ProtectedRoute.jsx';
-import AdminRoute from './components/ProtectedRoute/AdminRoute.jsx';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx';
+import AdminRoute from './components/auth/AdminRoute.jsx';
 
 // Global SOS
-import SOSButton from './components/SOSButton.jsx';
+import SOSButton from './components/common/SOSButton.jsx';
 
 function App() {
   const router = createBrowserRouter([
@@ -55,43 +55,24 @@ function App() {
         </ProtectedRoute>
       ),
       children: [
-        // Tourist + Admin can access
         { path: 'Dashboard', element: <Dashboard /> },
         { path: 'map-geo-fencing', element: <MapGeoFencing /> },
         { path: 'Help-Support', element: <HelpSupport /> },
-
-        // Admin only
         {
           path: 'Tourists',
-          element: (
-            <AdminRoute>
-              <TouristsDirectory />
-            </AdminRoute>
-          ),
+          element: <AdminRoute><TouristsDirectory /></AdminRoute>,
         },
         {
           path: 'Incidents',
-          element: (
-            <AdminRoute>
-              <IncidentsAndAlerts />
-            </AdminRoute>
-          ),
+          element: <AdminRoute><IncidentsAndAlerts /></AdminRoute>,
         },
         {
           path: 'Reports-Analytics',
-          element: (
-            <AdminRoute>
-              <ReportsAnalytics />
-            </AdminRoute>
-          ),
+          element: <AdminRoute><ReportsAnalytics /></AdminRoute>,
         },
         {
           path: 'settings-admin',
-          element: (
-            <AdminRoute>
-              <SettingsAdmin />
-            </AdminRoute>
-          ),
+          element: <AdminRoute><SettingsAdmin /></AdminRoute>,
         },
       ],
     },

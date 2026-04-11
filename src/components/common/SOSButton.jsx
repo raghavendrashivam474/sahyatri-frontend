@@ -1,7 +1,7 @@
 ﻿// src/components/SOSButton.jsx
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useSocket } from '../hooks/useSocket';
+import { useAuth } from '../../context/AuthContext';
+import { useSocket } from '../../hooks/useSocket';
 
 const SOSButton = () => {
   const [sending, setSending] = useState(false);

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"; // Import Link for navigation
-import Header from './Header';
-import Footer_80 from './Footer_80';
 
 // --- Mock Data (Replace with actual API calls in a real application) ---
 const mockIncidents = [

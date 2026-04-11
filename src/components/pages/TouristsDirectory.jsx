@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from "react-router-dom"; // Link is not used, can be removed
-import Header from './Header';
-import Footer_80 from './Footer_80'; 
+
 
 // Mock data remains the same...
 const mockTourists = [

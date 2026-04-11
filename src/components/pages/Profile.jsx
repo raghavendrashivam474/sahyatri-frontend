@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // --- START: Your image import ---
-import myImage from '../images/download.jpg';
+// import myImage from '../images/download.jpg';
 // --- END: Your image import ---
 
 // --- Icons (as simple functional components for reusability) ---

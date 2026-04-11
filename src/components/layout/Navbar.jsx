@@ -1,7 +1,7 @@
-﻿import React, { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
+﻿// src/components/layout/Navbar.jsx
+import React, { useState, forwardRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import logo from '../images/logo-removebg-preview.png';
+import { useAuth } from '../../context/AuthContext';
 
 const LogoutIcon = ({ style }) => (
   <svg style={style} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -23,10 +23,11 @@ const Navbar = forwardRef((props, ref) => {
     <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="SAHYatri Logo" className="h-10 w-10" />
-            <span className="text-xl font-bold">SAHYatri</span>
+
+          {/* ✅ Logo — Fixed */}
+          <Link to="/" className="flex items-center gap-2 no-underline">
+            <span style={{ fontSize: '1.6em' }}>🌍</span>
+            <span className="text-xl font-bold text-white">SAHYatri</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -35,7 +36,7 @@ const Navbar = forwardRef((props, ref) => {
             <Link to="/services" className="hover:text-blue-200 transition">Services</Link>
             <Link to="/about" className="hover:text-blue-200 transition">About</Link>
             <Link to="/contact" className="hover:text-blue-200 transition">Contact</Link>
-            
+
             {user ? (
               <>
                 <Link to="/Dashboard" className="hover:text-blue-200 transition">Dashboard</Link>
@@ -79,7 +80,7 @@ const Navbar = forwardRef((props, ref) => {
             <Link to="/services" className="block py-2 hover:bg-blue-700 px-4 rounded">Services</Link>
             <Link to="/about" className="block py-2 hover:bg-blue-700 px-4 rounded">About</Link>
             <Link to="/contact" className="block py-2 hover:bg-blue-700 px-4 rounded">Contact</Link>
-            
+
             {user ? (
               <>
                 <Link to="/Dashboard" className="block py-2 hover:bg-blue-700 px-4 rounded">Dashboard</Link>
